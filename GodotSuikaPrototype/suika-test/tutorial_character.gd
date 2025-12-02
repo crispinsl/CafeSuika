@@ -1,7 +1,7 @@
 extends Sprite2D
 
-@onready var tutorial_character = $Root/Base/TutorialCharacter
-@onready var dialogue_text = $DialogueText
+@onready var tutorial_character = $Tutorial/TutorialCharacter
+@onready var dialogue_text = $Tutorial/DialogueText
 
 var tutorial_step = 0
 var tutorial_messages = [

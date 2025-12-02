@@ -1,7 +1,6 @@
 extends Node
-
-@onready var tutorial_character = $Tutorial/TutorialCharacter
-@onready var dialogue_text = $Tutorial/DialogueText
+@onready var tutorial_character = $TutorialCharacter
+@onready var dialogue_text = $DialogueText
 
 var tutorial_step = 0
 var tutorial_messages = [
@@ -12,21 +11,22 @@ var tutorial_messages = [
 ]
 
 func _ready():
-	show_tutorial_message()
+	# Use call_deferred to wait for @onready variables to load
+	call_deferred("show_tutorial_message")
 
 func show_tutorial_message():
 	if tutorial_step < tutorial_messages.size():
-		dialogue_text.text = tutorial_messages[tutorial_step]
+		dialogue_text.set_text(tutorial_messages[tutorial_step])
 		tutorial_character.visible = true
 		dialogue_text.visible = true
 		
 		# Auto-advance after 3 seconds
-		#await get_tree().create_timer(3.0).timeout
-		#advance_tutorial()
-	#else:
-		#tutorial_character.visible = false
-		#dialogue_text.visible = false
+		await get_tree().create_timer(3.0).timeout
+		advance_tutorial()
+	else:
+		tutorial_character.visible = false
+		dialogue_text.visible = false
 
-#func advance_tutorial():
-	#tutorial_step += 1
-	#show_tutorial_message()
+func advance_tutorial():
+	tutorial_step += 1
+	show_tutorial_message()

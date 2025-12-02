@@ -1,22 +1,24 @@
 extends Node2D
-
-@export var min_x: float = 50.0  # Minimum x position
-@export var max_x: float = 2000.0  # Maximum x position
-@export var y_position: float = 100.0  # Fixed y position for the cloud
+@export var min_x: float = 470.0
+@export var max_x: float = 775.0
+@export var y_position: float = 100.0
 
 func _ready():
-	# Set the initial y position
 	position.y = y_position
 
 func _process(_delta):
-	# Get the mouse position in the viewport
-	var mouse_pos = get_viewport().get_mouse_position()
+	var mouse_pos = get_global_mouse_position()
 	
-	# Update the x position to follow the mouse
-	global_position.x = clamp(mouse_pos.x, min_x, max_x)
+	print("Mouse X: ", mouse_pos.x)
+	print("Before clamp - cloud X: ", global_position.x)
 	
-	# Keep y position fixed
+	var clamped_x = clamp(mouse_pos.x, min_x, max_x)
+	print("After clamp: ", clamped_x)
+	print("Min: ", min_x, " Max: ", max_x)
+	print("---")
+	
+	global_position.x = clamped_x
 	global_position.y = y_position
 	
-	# Debug: print the cloud's position
-	
+# TO DO:
+# -> make new fruits past orange that dont spawn but merge

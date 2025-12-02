@@ -40,7 +40,7 @@ func merge_with(other_fruit):
 		print("Already merging, skipping")
 		return
 	
-	print("MERGE HAPPENING!")
+	print("Merging!")
 	is_merging = true
 	other_fruit.is_merging = true
 	
