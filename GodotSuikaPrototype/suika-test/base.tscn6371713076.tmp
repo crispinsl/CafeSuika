@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx5pcs84b56l8"]
+
+[ext_resource type="Texture2D" uid="uid://cpjsvwrodag7l" path="res://dcc1401c-47ab-40bb-8c9e-5a7db0575d7c.jpg" id="1_8rhti"]
+[ext_resource type="Script" uid="uid://c4f5825aui6jp" path="res://cloud_spawner.gd" id="2_ohhpf"]
+[ext_resource type="Texture2D" uid="uid://1vtj572yrfyp" path="res://cloudstest.png" id="3_21bcp"]
+[ext_resource type="Script" uid="uid://dvn8lbkfk6v55" path="res://camera_2d.gd" id="4_ohhpf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpea4"]
+size = Vector2(3970.25, 80.25)
+
+[node name="base" type="Node2D"]
+position = Vector2(2105.5, -2206)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Jar" type="Node" parent="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Jar"]
+position = Vector2(2237.5, -2670)
+texture = ExtResource("1_8rhti")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Jar"]
+position = Vector2(2105.5, -2206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D"]
+position = Vector2(2200, 0)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tpea4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node/Jar"]
+position = Vector2(2105.5, -2206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D2"]
+position = Vector2(-2000, 0)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tpea4")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node/Jar"]
+position = Vector2(2105.5, -2206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D3"]
+position = Vector2(57.25, 1848)
+shape = SubResource("RectangleShape2D_tpea4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(403.5, -1896)
+zoom = Vector2(0.08, 0.08)
+script = ExtResource("4_ohhpf")
+
+[node name="cloudspawner" type="Node2D" parent="."]
+script = ExtResource("2_ohhpf")
+
+[node name="Sprite2D" type="Sprite2D" parent="cloudspawner"]
+top_level = true
+position = Vector2(2209, -6241)
+scale = Vector2(0.5754662, 0.5356692)
+texture = ExtResource("3_21bcp")
