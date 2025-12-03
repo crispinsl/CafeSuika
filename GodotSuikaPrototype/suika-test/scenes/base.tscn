@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bx5pcs84b56l8"]
+[gd_scene load_steps=17 format=3 uid="uid://bx5pcs84b56l8"]
 
 [ext_resource type="Script" uid="uid://dw8v37iy2s5v0" path="res://base.gd" id="1_vqfsp"]
 [ext_resource type="Texture2D" uid="uid://cpjsvwrodag7l" path="res://dcc1401c-47ab-40bb-8c9e-5a7db0575d7c.jpg" id="2_i6jx3"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://d4ap6esxvl0br" path="res://trashcan.gd" id="7_517kj"]
 [ext_resource type="Texture2D" uid="uid://b3vbkkumjnjxy" path="res://placeholders/trash_can.jpg" id="8_ot4hf"]
 [ext_resource type="Texture2D" uid="uid://ug6xcthf3upb" path="res://placeholders/coffee_place.png" id="9_i6jx3"]
+[ext_resource type="Texture2D" uid="uid://dqwrede5i86h0" path="res://placeholders/cream_place.png" id="10_6irmp"]
+[ext_resource type="Texture2D" uid="uid://fj40t2k1ucpr" path="res://placeholders/sugar_place.png" id="11_dmaw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpea4"]
 size = Vector2(333.375, 10.031189)
@@ -112,13 +114,21 @@ shape = SubResource("CircleShape2D_jn13j")
 [node name="cream" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="cream"]
+position = Vector2(345.5, -15)
+scale = Vector2(0.13, 0.13000001)
+texture = ExtResource("10_6irmp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cream"]
+position = Vector2(345.5, -15.5)
 shape = SubResource("CircleShape2D_i6jx3")
 
 [node name="sugar" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="sugar"]
+position = Vector2(304.875, -14.236868)
+scale = Vector2(0.14124992, 0.14124994)
+texture = ExtResource("11_dmaw2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sugar"]
+position = Vector2(305, -14.5)
 shape = SubResource("CircleShape2D_6irmp")
