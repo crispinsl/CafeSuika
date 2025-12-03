@@ -74,6 +74,7 @@ func update_fruit_appearance(fruit):
 
 
 # TO DO:
+# make it so current 'fruit' is visible in cloud
 # set lose condition
 # set win condition
 # make scenes for each
