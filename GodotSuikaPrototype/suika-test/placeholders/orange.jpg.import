@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3bkh3vb7ki3"
-path="res://.godot/imported/strawberryplace.png-93e903447524ddc655fcc09afc371c2d.ctex"
+uid="uid://df51kgwaopic2"
+path="res://.godot/imported/orange.jpg-100e1b07cf30bb75160520104ea95ca7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://strawberryplace.png"
-dest_files=["res://.godot/imported/strawberryplace.png-93e903447524ddc655fcc09afc371c2d.ctex"]
+source_file="res://placeholders/orange.jpg"
+dest_files=["res://.godot/imported/orange.jpg-100e1b07cf30bb75160520104ea95ca7.ctex"]
 
 [params]
 

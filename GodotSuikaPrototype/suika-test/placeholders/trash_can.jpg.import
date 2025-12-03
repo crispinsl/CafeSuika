@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ll6kdcjqeq8"
-path="res://.godot/imported/cherry.jpg-d701126798b2cb781e019e8c92a44a76.ctex"
+uid="uid://b3vbkkumjnjxy"
+path="res://.godot/imported/trash_can.jpg-3f7866942660e46056b47799510c0e9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cherry.jpg"
-dest_files=["res://.godot/imported/cherry.jpg-d701126798b2cb781e019e8c92a44a76.ctex"]
+source_file="res://placeholders/trash_can.jpg"
+dest_files=["res://.godot/imported/trash_can.jpg-3f7866942660e46056b47799510c0e9b.ctex"]
 
 [params]
 

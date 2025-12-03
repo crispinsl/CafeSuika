@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxnwp0y3nqown"
-path="res://.godot/imported/orangeplace.png-356ef4b5f7e629f425d4873405b227a6.ctex"
+uid="uid://dbasoxy4vemgf"
+path="res://.godot/imported/appleplace.png-0b9425fe516310ff8194d68fc12d1b25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://orangeplace.png"
-dest_files=["res://.godot/imported/orangeplace.png-356ef4b5f7e629f425d4873405b227a6.ctex"]
+source_file="res://placeholders/appleplace.png"
+dest_files=["res://.godot/imported/appleplace.png-0b9425fe516310ff8194d68fc12d1b25.ctex"]
 
 [params]
 

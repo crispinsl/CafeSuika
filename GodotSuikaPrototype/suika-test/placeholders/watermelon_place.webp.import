@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1vtj572yrfyp"
-path="res://.godot/imported/cloudstest.png-eaa9683c0ed9f4d6448533ec408f2cac.ctex"
+uid="uid://cj607kcoq4uqj"
+path="res://.godot/imported/watermelon_place.webp-fcbf5e7fb53f9be422493e04a0d82961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cloudstest.png"
-dest_files=["res://.godot/imported/cloudstest.png-eaa9683c0ed9f4d6448533ec408f2cac.ctex"]
+source_file="res://placeholders/watermelon_place.webp"
+dest_files=["res://.godot/imported/watermelon_place.webp-fcbf5e7fb53f9be422493e04a0d82961.ctex"]
 
 [params]
 

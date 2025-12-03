@@ -1,16 +1,17 @@
 extends Node2D
 
 # Preload your fruit scene
-const FRUIT_SCENE = preload("res://FRUIT_SCENE.tscn")
-const MAX_FRUIT_TYPE = 5
+const FRUIT_SCENE = preload("res://scenes/FRUIT_SCENE.tscn")
+const MAX_FRUIT_TYPE = 6
 
 # Preload all your fruit sprites
 var fruit_textures = [
-	preload("res://cherryplace.png"),  # Cherry or smallest fruit
-	preload("res://strawberryplace.png"),  # Strawberry
-	preload("res://grapeplace.png"),  # Grape
-	preload("res://appleplace.png"), # Apple
-	preload("res://orangeplace.png")]  # Orange
+	preload("res://placeholders/cherryplace.png"),
+	preload("res://placeholders/strawberryplace.png"),
+	preload("res://placeholders/grapeplace.png"),
+	preload("res://placeholders/appleplace.png"),
+	preload("res://placeholders/orangeplace.png"),
+	preload("res://placeholders/watermelon_place.png")]
 
 @onready var cloud = $cloudspawner
 
@@ -36,10 +37,9 @@ func drop_fruit():
 	
 	add_child(fruit)
 	
-	# Add this line!
 	update_fruit_appearance(fruit)
 	
-	current_fruit_type = randi() % 5
+	current_fruit_type = int(round(randf_range(1, 4)))
 	
 	can_drop = false
 	await get_tree().create_timer(1.0).timeout
@@ -70,3 +70,17 @@ func update_fruit_appearance(fruit):
 	
 	fruit.get_node("Sprite2D").scale = Vector2(scale_factor, scale_factor)
 	fruit.get_node("CollisionShape2D").scale = Vector2(scale_factor * 1, scale_factor * 1)
+
+
+
+# TO DO:
+# set lose condition
+# set win condition
+# make scenes for each
+# DONT fix cloud - instead put a trash can there for circles player wants to discard
+# export to exe
+# start diner section
+# make recipes section
+## timer?
+## randomly go through recipes to earn cash
+# convert fruits demo into individual ingredients list

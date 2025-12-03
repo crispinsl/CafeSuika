@@ -1,0 +1,124 @@
+[gd_scene load_steps=15 format=3 uid="uid://bx5pcs84b56l8"]
+
+[ext_resource type="Script" uid="uid://dw8v37iy2s5v0" path="res://base.gd" id="1_vqfsp"]
+[ext_resource type="Texture2D" uid="uid://cpjsvwrodag7l" path="res://dcc1401c-47ab-40bb-8c9e-5a7db0575d7c.jpg" id="2_i6jx3"]
+[ext_resource type="Script" uid="uid://c4f5825aui6jp" path="res://cloud_spawner.gd" id="3_jn13j"]
+[ext_resource type="Texture2D" uid="uid://1vtj572yrfyp" path="res://placeholders/cloudstest.png" id="4_6irmp"]
+[ext_resource type="Script" uid="uid://r8oct448f5fo" path="res://tutorial.gd" id="5_dmaw2"]
+[ext_resource type="Texture2D" uid="uid://bt7k0mohgictu" path="res://placeholders/debug_vegeta.png" id="6_1xxg6"]
+[ext_resource type="Script" uid="uid://d4ap6esxvl0br" path="res://trashcan.gd" id="7_517kj"]
+[ext_resource type="Texture2D" uid="uid://b3vbkkumjnjxy" path="res://placeholders/trash_can.jpg" id="8_ot4hf"]
+[ext_resource type="Texture2D" uid="uid://ug6xcthf3upb" path="res://placeholders/coffee_place.png" id="9_i6jx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpea4"]
+size = Vector2(333.375, 10.031189)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56f15"]
+size = Vector2(137, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jn13j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6jx3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6irmp"]
+
+[node name="base" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_vqfsp")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Jar" type="Node2D" parent="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Jar"]
+z_index = -1
+position = Vector2(636.9062, 412.625)
+scale = Vector2(0.08526297, 0.08180703)
+texture = ExtResource("2_i6jx3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Jar"]
+position = Vector2(2105.5, -2206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D"]
+position = Vector2(-1300.5, 2665)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tpea4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node/Jar"]
+position = Vector2(2097, -2206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D2"]
+position = Vector2(-1633, 2668)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tpea4")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node/Jar"]
+position = Vector2(-1789.5, 1364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D3"]
+position = Vector2(2421.8125, -753)
+shape = SubResource("RectangleShape2D_tpea4")
+
+[node name="cloudspawner" type="Node2D" parent="."]
+position = Vector2(40, -2187)
+script = ExtResource("3_jn13j")
+min_x = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="cloudspawner"]
+scale = Vector2(0.025, 0.023)
+texture = ExtResource("4_6irmp")
+
+[node name="Tutorial" type="Node" parent="."]
+script = ExtResource("5_dmaw2")
+
+[node name="DialogueText" type="RichTextLabel" parent="Tutorial"]
+offset_left = 101.0
+offset_top = 28.0
+offset_right = 269.0
+offset_bottom = 100.5
+
+[node name="TutorialCharacter" type="Sprite2D" parent="Tutorial"]
+z_index = -1
+position = Vector2(192, 407)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_1xxg6")
+
+[node name="trashcan" type="Node2D" parent="."]
+script = ExtResource("7_517kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="trashcan"]
+position = Vector2(150.75, 342)
+scale = Vector2(0.14449999, 0.08099999)
+texture = ExtResource("8_ot4hf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="trashcan"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trashcan/StaticBody2D"]
+position = Vector2(154, 310)
+shape = SubResource("RectangleShape2D_56f15")
+
+[node name="coffee" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="coffee"]
+position = Vector2(386, -16)
+scale = Vector2(0.13125016, 0.13125016)
+texture = ExtResource("9_i6jx3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coffee"]
+position = Vector2(386, -16)
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CircleShape2D_jn13j")
+
+[node name="cream" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="cream"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cream"]
+shape = SubResource("CircleShape2D_i6jx3")
+
+[node name="sugar" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="sugar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sugar"]
+shape = SubResource("CircleShape2D_6irmp")

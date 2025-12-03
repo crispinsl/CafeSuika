@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o02iwpovm2sc"
-path="res://.godot/imported/cherryplace.png-7dd1a7c4983d6122c7674fc63a85c30c.ctex"
+uid="uid://ug6xcthf3upb"
+path="res://.godot/imported/coffee_place.png-a73574775237d06c128b0a63487e687c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cherryplace.png"
-dest_files=["res://.godot/imported/cherryplace.png-7dd1a7c4983d6122c7674fc63a85c30c.ctex"]
+source_file="res://placeholders/coffee_place.png"
+dest_files=["res://.godot/imported/coffee_place.png-a73574775237d06c128b0a63487e687c.ctex"]
 
 [params]
 

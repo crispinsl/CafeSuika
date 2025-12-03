@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxoj8g2vd45ej"
-path="res://.godot/imported/strawberry.jpg-65caab66027672923e4e485c78b2ab9b.ctex"
+uid="uid://b5sxnarvhqems"
+path="res://.godot/imported/game_over.jpg-ca5d1939fecb39f6327cdbdd6f81c64e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://strawberry.jpg"
-dest_files=["res://.godot/imported/strawberry.jpg-65caab66027672923e4e485c78b2ab9b.ctex"]
+source_file="res://placeholders/game_over.jpg"
+dest_files=["res://.godot/imported/game_over.jpg-ca5d1939fecb39f6327cdbdd6f81c64e.ctex"]
 
 [params]
 
