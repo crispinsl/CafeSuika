@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SuikaTest"
-run/main_scene="uid://bx5pcs84b56l8"
+run/main_scene="uid://dcl0d1jltfqtu"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
