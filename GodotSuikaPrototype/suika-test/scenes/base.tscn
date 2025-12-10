@@ -1,28 +1,24 @@
-[gd_scene load_steps=17 format=3 uid="uid://bx5pcs84b56l8"]
+[gd_scene load_steps=16 format=3 uid="uid://bx5pcs84b56l8"]
 
 [ext_resource type="Script" uid="uid://dw8v37iy2s5v0" path="res://base.gd" id="1_vqfsp"]
-[ext_resource type="Texture2D" uid="uid://cpjsvwrodag7l" path="res://dcc1401c-47ab-40bb-8c9e-5a7db0575d7c.jpg" id="2_i6jx3"]
+[ext_resource type="Texture2D" uid="uid://blwlk8yorekjl" path="res://placeholders/jar.png" id="2_1xxg6"]
 [ext_resource type="Script" uid="uid://c4f5825aui6jp" path="res://cloud_spawner.gd" id="3_jn13j"]
 [ext_resource type="Texture2D" uid="uid://1vtj572yrfyp" path="res://placeholders/cloudstest.png" id="4_6irmp"]
 [ext_resource type="Script" uid="uid://r8oct448f5fo" path="res://tutorial.gd" id="5_dmaw2"]
-[ext_resource type="Texture2D" uid="uid://bt7k0mohgictu" path="res://placeholders/debug_vegeta.png" id="6_1xxg6"]
-[ext_resource type="Script" uid="uid://d4ap6esxvl0br" path="res://trashcan.gd" id="7_517kj"]
-[ext_resource type="Texture2D" uid="uid://b3vbkkumjnjxy" path="res://placeholders/trash_can.jpg" id="8_ot4hf"]
-[ext_resource type="Texture2D" uid="uid://ug6xcthf3upb" path="res://placeholders/coffee_place.png" id="9_i6jx3"]
-[ext_resource type="Texture2D" uid="uid://dqwrede5i86h0" path="res://placeholders/cream_place.png" id="10_6irmp"]
-[ext_resource type="Texture2D" uid="uid://fj40t2k1ucpr" path="res://placeholders/sugar_place.png" id="11_dmaw2"]
+[ext_resource type="Texture2D" uid="uid://kt5dfv1wkq33" path="res://placeholders/cappy_1.png" id="6_6irmp"]
+[ext_resource type="Texture2D" uid="uid://bdwh772qmxcpv" path="res://placeholders/speechbubble.png" id="7_6irmp"]
+[ext_resource type="Script" uid="uid://chc5w328m6nnm" path="res://scenes/TrashArea.gd" id="10_dmaw2"]
+[ext_resource type="Texture2D" uid="uid://dp66mwhwpdp3t" path="res://placeholders/trash.png" id="11_1xxg6"]
+[ext_resource type="Script" uid="uid://x2dewj0iuw0b" path="res://scenes/GameOverScreen.gd" id="12_1xxg6"]
+[ext_resource type="Script" uid="uid://q002py50summ" path="res://scenes/RecipeUI.gd" id="12_dmaw2"]
+[ext_resource type="Texture2D" uid="uid://bo3wb4xqr6rty" path="res://placeholders/background.png" id="13_1xxg6"]
+[ext_resource type="Script" uid="uid://bs7arrfv6mmx8" path="res://scenes/WinScreen.gd" id="13_517kj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpea4"]
 size = Vector2(333.375, 10.031189)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_56f15"]
-size = Vector2(137, 4)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jn13j"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_i6jx3"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_6irmp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xxg6"]
+size = Vector2(80, 19.5)
 
 [node name="base" type="Node2D"]
 scale = Vector2(2, 2)
@@ -34,15 +30,15 @@ script = ExtResource("1_vqfsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node/Jar"]
 z_index = -1
-position = Vector2(636.9062, 412.625)
-scale = Vector2(0.08526297, 0.08180703)
-texture = ExtResource("2_i6jx3")
+position = Vector2(811, 495.00003)
+scale = Vector2(0.9871626, 0.85484856)
+texture = ExtResource("2_1xxg6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node/Jar"]
 position = Vector2(2105.5, -2206)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D"]
-position = Vector2(-1300.5, 2665)
+position = Vector2(-1166.5, 2700)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_tpea4")
 
@@ -50,7 +46,7 @@ shape = SubResource("RectangleShape2D_tpea4")
 position = Vector2(2097, -2206)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D2"]
-position = Vector2(-1633, 2668)
+position = Vector2(-1516, 2709)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_tpea4")
 
@@ -58,77 +54,198 @@ shape = SubResource("RectangleShape2D_tpea4")
 position = Vector2(-1789.5, 1364)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Jar/StaticBody2D3"]
-position = Vector2(2421.8125, -753)
+position = Vector2(2559.5, -696)
 shape = SubResource("RectangleShape2D_tpea4")
 
 [node name="cloudspawner" type="Node2D" parent="."]
 position = Vector2(40, -2187)
 script = ExtResource("3_jn13j")
-min_x = 25.0
 
 [node name="Sprite2D" type="Sprite2D" parent="cloudspawner"]
 scale = Vector2(0.025, 0.023)
 texture = ExtResource("4_6irmp")
 
+[node name="PreviewSprite" type="Sprite2D" parent="cloudspawner"]
+
 [node name="Tutorial" type="Node" parent="."]
 script = ExtResource("5_dmaw2")
 
 [node name="DialogueText" type="RichTextLabel" parent="Tutorial"]
-offset_left = 101.0
-offset_top = 28.0
-offset_right = 269.0
-offset_bottom = 100.5
+offset_left = 245.0
+offset_top = 107.0
+offset_right = 538.0
+offset_bottom = 238.0
+theme_override_colors/default_color = Color(0.6506413, 0.25883818, 0.1751444, 1)
 
 [node name="TutorialCharacter" type="Sprite2D" parent="Tutorial"]
 z_index = -1
-position = Vector2(192, 407)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_1xxg6")
+position = Vector2(287.44073, 437.24997)
+scale = Vector2(0.2900915, 0.29248047)
+texture = ExtResource("6_6irmp")
 
-[node name="trashcan" type="Node2D" parent="."]
-script = ExtResource("7_517kj")
+[node name="SpeechBubble" type="Sprite2D" parent="Tutorial"]
+z_index = -2
+position = Vector2(385.75, 206.56248)
+scale = Vector2(1.762739, 2.0318322)
+texture = ExtResource("7_6irmp")
 
-[node name="Sprite2D" type="Sprite2D" parent="trashcan"]
-position = Vector2(150.75, 342)
-scale = Vector2(0.14449999, 0.08099999)
-texture = ExtResource("8_ot4hf")
+[node name="TrashArea" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource("10_dmaw2")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="trashcan"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashArea"]
+position = Vector2(234, 324.5)
+shape = SubResource("RectangleShape2D_1xxg6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="trashcan/StaticBody2D"]
-position = Vector2(154, 310)
-shape = SubResource("RectangleShape2D_56f15")
+[node name="Sprite2D" type="Sprite2D" parent="TrashArea"]
+position = Vector2(236, 299)
+scale = Vector2(0.21224995, 0.24897222)
+texture = ExtResource("11_1xxg6")
 
-[node name="coffee" type="Area2D" parent="."]
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = -20.0
+offset_top = 8.5
+offset_right = 74.0
+offset_bottom = 31.5
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="coffee"]
-position = Vector2(386, -16)
-scale = Vector2(0.13125016, 0.13125016)
-texture = ExtResource("9_i6jx3")
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("12_dmaw2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coffee"]
-position = Vector2(386, -16)
-scale = Vector2(1.2, 1.2)
-shape = SubResource("CircleShape2D_jn13j")
+[node name="RightPanel" type="Panel" parent="UI"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -315.0
+grow_horizontal = 0
+grow_vertical = 2
 
-[node name="cream" type="Area2D" parent="."]
+[node name="RecipeTitle" type="Label" parent="UI/RightPanel"]
+layout_mode = 0
+offset_top = 7.0
+offset_right = 308.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 25
+text = "Current Recipe:"
+horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="cream"]
-position = Vector2(345.5, -15)
-scale = Vector2(0.13, 0.13000001)
-texture = ExtResource("10_6irmp")
+[node name="RecipeNameLabel" type="Label" parent="UI/RightPanel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 47.0
+offset_right = 298.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cream"]
-position = Vector2(344.5, -14)
-shape = SubResource("CircleShape2D_i6jx3")
+[node name="RecipeIngredientsContainer" type="VBoxContainer" parent="UI/RightPanel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 76.0
+offset_right = 301.0
+offset_bottom = 161.0
 
-[node name="sugar" type="Area2D" parent="."]
+[node name="GuideTitle" type="Label" parent="UI/RightPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 161.0
+offset_right = 293.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 24
+text = "Ingredient Guide:"
+horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="sugar"]
-position = Vector2(304.875, -14.236868)
-scale = Vector2(0.14124992, 0.14124994)
-texture = ExtResource("11_dmaw2")
+[node name="IngredientGuideContainer" type="VBoxContainer" parent="UI/RightPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 200.0
+offset_right = 297.0
+offset_bottom = 624.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sugar"]
-position = Vector2(305, -14.5)
-shape = SubResource("CircleShape2D_6irmp")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(318.3654, 178.5)
+scale = Vector2(0.5567559, 0.5523077)
+texture = ExtResource("13_1xxg6")
+
+[node name="GameOverScreen" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("12_1xxg6")
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="GameOverLabel" type="Label" parent="GameOverScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartLabel" type="Label" parent="GameOverScreen"]
+offset_left = 409.0
+offset_top = 418.0
+offset_right = 890.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 30
+text = "Press SPACE to restart"
+horizontal_alignment = 1
+
+[node name="WinScreen" type="CanvasLayer" parent="."]
+script = ExtResource("13_517kj")
+
+[node name="ColorRect" type="ColorRect" parent="WinScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.84705883)
+
+[node name="WinLabel" type="Label" parent="WinScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -122.0
+offset_right = 308.0
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1.6364455e-06, 0.79453826, 0.70102334, 1)
+theme_override_colors/font_outline_color = Color(0.0056296615, 0.28675562, 0.4056834, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 100
+text = "RECIPE COMPLETE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueLabel" type="Label" parent="WinScreen"]
+offset_left = 410.0
+offset_top = 392.0
+offset_right = 877.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(1, 0.27003932, 0.47277927, 1)
+theme_override_colors/font_outline_color = Color(0.24248275, 0.00035063253, 0.34948736, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "Press SPACE to continue"
